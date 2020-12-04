@@ -163,9 +163,9 @@ module e203_exu_alu_lsuagu(
     `endif//}
   `endif//}
 
-  wire agu_i_size_b  = (agu_i_size == 2'b00);
-  wire agu_i_size_hw = (agu_i_size == 2'b01);
-  wire agu_i_size_w  = (agu_i_size == 2'b10);
+  wire agu_i_size_b  = (agu_i_size == 2'b00);//byte
+  wire agu_i_size_hw = (agu_i_size == 2'b01);//half word
+  wire agu_i_size_w  = (agu_i_size == 2'b10);//word
 
   wire agu_i_addr_unalgn = 
             (agu_i_size_hw &  agu_icb_cmd_addr[0])
